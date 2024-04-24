@@ -17,3 +17,10 @@ URL `amqp://guest:guest@localhost:5672` yang sama pada kedua program menandakan 
 
 
 Setelah Publisher dijalankan, ia akan mengirim data yang telah dikodekan secara statis ke antrean pesan (message queue). Selanjutnya, Subscriber akan menerima data tersebut dari antrean pesan dan menampilkannya di konsol seperti yang terlihat pada gambar di atas.
+
+## Lampiran monitoring chart based on publisher
+
+![Monitoring chart based on publisher](assets/images/image3.png)
+
+
+Berdasarkan lampiran di atas, terlihat adanya lonjakan yang menunjukkan peningkatan tingkat pesan (message rate) pada interval tertentu, yang disebabkan oleh eksekusi berulang cargo run pada Publisher. Ini menandakan bahwa setiap kali cargo run dijalankan, terjadi peningkatan tingkat pesan di RabbitMQ yang berperan sebagai antrean pesan (message queue).
